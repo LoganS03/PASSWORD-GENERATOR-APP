@@ -76,10 +76,18 @@ function createPassword(elements){
         password.innerText = ""
         password.style.color = "#E6E5EA"
         
-        for(let i = 1; i <= inputLength.value; i++){
+        for(let i = 1; i <= inputLength.value; i++){    
+            
             choosenCharacters = elements[Math.trunc(Math.random() * elements.length)]
             randomCharacter = choosenCharacters[Math.trunc(Math.random() * choosenCharacters.length)]
             password.innerText += randomCharacter
+            
+            if(inputLength.value > 22){
+                password.style.fontSize = "28px"
+            }
+            else{
+                password.style.fontSize = "32px"
+            }
         }
     }
     else{

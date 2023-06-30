@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&display=swap');
+
+$default-color: #E6E5EA;
+$color-grey: #817D92;
+$color-dark-grey: #24232C;
+$very-dark-grey: #18171F;
+$color-green: #A4FFAF;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.headingL{
+    font-size: 32px;
+}
+.headingM{
+    font-size: 24px;
+}
+
+body{
+    font-family: JetBrains Mono;
+    font-size: 18px;
+    
+    color: $default-color;
+    background: linear-gradient(180deg, #14131B 0%, #08070B 100%);
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+    h1{
+        color: $color-grey;
+
+        margin-bottom: 31px;
+    }
+
+    .result{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 540px;
+        height: 80px;
+        
+        background: $color-dark-grey;
+
+        padding-left: 32px;
+        padding-right: 32px;
+        margin-bottom: 24px;
+
+        .password{
+            color: $color-grey;
+        }
+
+        svg{
+            &:hover{
+                cursor: pointer;
+                path{
+                    fill: $default-color;
+                }
+            }
+        }
+    }
+
+    .options{
+        width: 540px;
+
+        background: $color-dark-grey;
+        padding: 24px 32px 32px;
+
+        .character_length{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            margin-bottom: 16px;
+
+            p.length{
+                color: $color-green;
+            }
+        }
+
+        .slider{
+            margin-bottom: 42px;
+
+            .fill{
+                width: 50%;
+                height: 8px;
+
+                transform: translateY(18.4px);
+                background: $color-green;
+                margin-top: -8px;
+            }
+
+            input[type="range"]{
+                -webkit-appearance: none;
+                width: 100%;
+                height: 8px;
+                background: $very-dark-grey;
+                
+                &:hover::-webkit-slider-thumb{
+                    border: 2px solid $color-green;
+                    background: $very-dark-grey;
+                }
+    
+                &::-webkit-slider-thumb{
+                    position: relative;
+                    appearance: none;
+                    width: 25px;
+                    height: 25px;
+                    border-radius: 100%;
+                    background: $default-color;
+                    cursor: pointer;
+                }
+
+            }
+        }
+
+        ul{
+            display: flex;
+            flex-direction: column;
+            gap: 19px;
+            
+            list-style: none;
+            margin-bottom: 31px;
+
+            li{
+                display: flex;
+                align-items: center;
+
+                input[type="checkbox"]{
+                    display: none;
+                    
+                    &:checked ~ label .custom_checkbox{
+                        border: none;
+                        background: $color-green;
+
+                        svg{
+                            display: block;
+                        }
+                    }
+                }
+                
+                label{
+                    display: flex;
+                    align-items: center;
+                    gap: 24px;
+
+                    .custom_checkbox{
+                        width: 20px;
+                        height: 20px;
+                        border: 2px solid $default-color;
+
+                        svg{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        .strength{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            height: 72px;
+            padding-left: 32px;
+            padding-right: 31.5px;
+
+            background: $very-dark-grey;
+
+            margin-bottom: 32px;
+
+            .score{
+                display: flex;
+                gap: 15.5px;
+
+                .indicator{
+                    display: flex;
+                    gap: 8px;
+
+                    .scale{
+                        width: 10px;
+                        height: 28px;
+                        border: 2px solid $default-color;
+                    }
+                }
+            }
+        }
+
+        button{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 24px;
+            
+            width: 100%;
+            height: 65px;
+
+            font-family: JetBrains Mono;
+            font-size: 18px;
+            
+            color: $color-dark-grey;
+            background: $color-green;
+
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .headingL{
+        font-size: 24px;
+    }
+    .headingM{
+        font-size: 16px;
+    }
+    
+    body{
+        font-size: 16px;
+    }
+    
+    main{
+        h1{
+            margin-bottom: 16px;
+        }
+    
+        .result{
+            width: 343px;
+            height: 64px;
+    
+            padding-left: 16px;
+            padding-right: 15.5px;
+            margin-bottom: 16px;
+        }
+    
+        .options{
+            width: 343px;
+    
+            padding: 16px;
+    
+            .character_length{
+                margin-bottom: 8px;
+            }
+    
+            ul{
+                gap: 16px;
+                
+                margin-bottom: 32px;
+    
+                li{
+                    label{
+                        gap: 20px;
+                    }
+                }
+            }
+    
+            .strength{
+                height: 56px;
+                padding-left: 16px;
+                padding-right: 16px;
+    
+                margin-bottom: 16px;
+    
+                .score{
+                    display: flex;
+                    gap: 15.5px;
+                }
+            }
+    
+            button{
+                gap: 16px;            
+                height: 56px;
+                font-size: 16px;
+            }
+        }
+    }
+}

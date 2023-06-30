@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.headingL {
+  font-size: 32px;
+}
+
+.headingM {
+  font-size: 24px;
+}
+
+body {
+  font-family: JetBrains Mono;
+  font-size: 18px;
+  color: #E6E5EA;
+  background: linear-gradient(180deg, #14131B 0%, #08070B 100%);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+main h1 {
+  color: #817D92;
+  margin-bottom: 31px;
+}
+main .result {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 540px;
+  height: 80px;
+  background: #24232C;
+  padding-left: 32px;
+  padding-right: 32px;
+  margin-bottom: 24px;
+}
+main .result .password {
+  color: #817D92;
+}
+main .result svg:hover {
+  cursor: pointer;
+}
+main .result svg:hover path {
+  fill: #E6E5EA;
+}
+main .options {
+  width: 540px;
+  background: #24232C;
+  padding: 24px 32px 32px;
+}
+main .options .character_length {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+main .options .character_length p.length {
+  color: #A4FFAF;
+}
+main .options .slider {
+  margin-bottom: 42px;
+}
+main .options .slider .fill {
+  width: 50%;
+  height: 8px;
+  transform: translateY(18.4px);
+  background: #A4FFAF;
+  margin-top: -8px;
+}
+main .options .slider input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 8px;
+  background: #18171F;
+}
+main .options .slider input[type=range]:hover::-webkit-slider-thumb {
+  border: 2px solid #A4FFAF;
+  background: #18171F;
+}
+main .options .slider input[type=range]::-webkit-slider-thumb {
+  position: relative;
+  -webkit-appearance: none;
+          appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  background: #E6E5EA;
+  cursor: pointer;
+}
+main .options ul {
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+  list-style: none;
+  margin-bottom: 31px;
+}
+main .options ul li {
+  display: flex;
+  align-items: center;
+}
+main .options ul li input[type=checkbox] {
+  display: none;
+}
+main .options ul li input[type=checkbox]:checked ~ label .custom_checkbox {
+  border: none;
+  background: #A4FFAF;
+}
+main .options ul li input[type=checkbox]:checked ~ label .custom_checkbox svg {
+  display: block;
+}
+main .options ul li label {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+main .options ul li label .custom_checkbox {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #E6E5EA;
+}
+main .options ul li label .custom_checkbox svg {
+  display: none;
+}
+main .options .strength {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 72px;
+  padding-left: 32px;
+  padding-right: 31.5px;
+  background: #18171F;
+  margin-bottom: 32px;
+}
+main .options .strength .score {
+  display: flex;
+  gap: 15.5px;
+}
+main .options .strength .score .indicator {
+  display: flex;
+  gap: 8px;
+}
+main .options .strength .score .indicator .scale {
+  width: 10px;
+  height: 28px;
+  border: 2px solid #E6E5EA;
+}
+main .options button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  height: 65px;
+  font-family: JetBrains Mono;
+  font-size: 18px;
+  color: #24232C;
+  background: #A4FFAF;
+}
+main .options button:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 375px) {
+  .headingL {
+    font-size: 24px;
+  }
+  .headingM {
+    font-size: 16px;
+  }
+  body {
+    font-size: 16px;
+  }
+  main h1 {
+    margin-bottom: 16px;
+  }
+  main .result {
+    width: 343px;
+    height: 64px;
+    padding-left: 16px;
+    padding-right: 15.5px;
+    margin-bottom: 16px;
+  }
+  main .options {
+    width: 343px;
+    padding: 16px;
+  }
+  main .options .character_length {
+    margin-bottom: 8px;
+  }
+  main .options ul {
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+  main .options ul li label {
+    gap: 20px;
+  }
+  main .options .strength {
+    height: 56px;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-bottom: 16px;
+  }
+  main .options .strength .score {
+    display: flex;
+    gap: 15.5px;
+  }
+  main .options button {
+    gap: 16px;
+    height: 56px;
+    font-size: 16px;
+  }
+}/*# sourceMappingURL=style.css.map */

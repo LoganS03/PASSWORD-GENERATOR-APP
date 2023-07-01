@@ -161,6 +161,7 @@ main .options button {
   height: 65px;
   font-family: JetBrains Mono;
   font-size: 18px;
+  border: none;
   color: #24232C;
   background: #A4FFAF;
 }

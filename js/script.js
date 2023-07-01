@@ -81,12 +81,26 @@ function createPassword(elements){
             choosenCharacters = elements[Math.trunc(Math.random() * elements.length)]
             randomCharacter = choosenCharacters[Math.trunc(Math.random() * choosenCharacters.length)]
             password.innerText += randomCharacter
-            
-            if(inputLength.value > 22){
-                password.style.fontSize = "28px"
+            if(window.innerWidth <= 600){
+                if(inputLength.value > 19){
+                    if(inputLength.value > 22){
+                        password.style.fontSize = "18px"
+                    }
+                    else{
+                        password.style.fontSize = "20px"
+                    }
+                }
+                else{
+                    password.style.fontSize = "24px"
+                }
             }
             else{
-                password.style.fontSize = "32px"
+                if(inputLength.value > 22){
+                    password.style.fontSize = "28px"
+                }
+                else{
+                    password.style.fontSize = "32px"
+                }
             }
         }
     }

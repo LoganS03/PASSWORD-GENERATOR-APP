@@ -127,6 +127,8 @@ button.addEventListener("click", () => {
 })
 
 copyButton.addEventListener("click", () => {
-    copied.style.display = "block";
-    navigator.clipboardData.writeText(password.innerText)
+    if(navigator.clipboard){
+        copied.style.display = "block";
+        navigator.clipboard.writeText(password.innerText)
+    }
 })

@@ -57,11 +57,22 @@ main{
             color: $color-grey;
         }
 
-        svg{
-            &:hover{
-                cursor: pointer;
-                path{
-                    fill: $default-color;
+        >div{
+            display: flex;
+            align-items: center;
+            gap: 16px;
+                
+            .copied{
+                display: none;
+                color: $color-green;
+            }
+
+            svg{
+                &:hover{
+                    cursor: pointer;
+                    path{
+                        fill: $default-color;
+                    }
                 }
             }
         }

@@ -7,6 +7,8 @@ let checkbox = document.querySelectorAll("input[type='checkbox'")
 let custom_checkbox = document.querySelectorAll(".custom_checkbox")
 
 let button = document.querySelector("button[type='button'")
+let copied = document.querySelector(".copied")
+let copyButton = document.querySelector(".copy_button")
 let password = document.querySelector("p.password")
 
 let characters = ["QWERTYUIOPASDFGHJKLZXCVBNM", "qwertyuiopasdfghjklzxcvbnm", "0123456789", "~!@#$%^&*()/*-+№[]{}:;<>?.,"]
@@ -119,6 +121,12 @@ button.addEventListener("click", () => {
             charactersPassed.push(characters[i])
         }
     }
-
+    
+    copied.style.display = "none";
     createPassword(charactersPassed)
+})
+
+copyButton.addEventListener("click", () => {
+    copied.style.display = "block";
+    navigator.clipboardData.writeText(password.innerText)
 })

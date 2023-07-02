@@ -45,10 +45,19 @@ main .result {
 main .result .password {
   color: #817D92;
 }
-main .result svg:hover {
+main .result > div {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+main .result > div .copied {
+  display: none;
+  color: #A4FFAF;
+}
+main .result > div svg:hover {
   cursor: pointer;
 }
-main .result svg:hover path {
+main .result > div svg:hover path {
   fill: #E6E5EA;
 }
 main .options {
